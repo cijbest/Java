@@ -1,0 +1,30 @@
+package stream;
+
+import java.io.IOException;
+
+public class SystemInTest {
+
+	public static void main(String[] args) {
+
+		System.out.println("엔터를 누르세요");
+		
+		int i = 0;
+		try {
+			i = System.in.read(); //read는 항상 int값을 리턴해 주어야 함. -1을 반환하므로
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+		System.out.println(i);
+
+		try {
+			i = System.in.read();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(i);
+	}
+
+}

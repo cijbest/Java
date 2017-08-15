@@ -1,0 +1,53 @@
+package linkstack;
+
+import linkedlist.ListNode;
+import linkedlist.MyLinkedList;
+
+public class MyListStack {
+	
+	MyLinkedList stack;
+	ListNode top;
+	int count;
+	
+public MyListStack(){
+		
+		stack = new MyLinkedList();
+		count = 0;
+		top = null;
+	}
+	
+	public void push(String data){
+		top = stack.addElement(data);
+		count++;
+	}
+	
+	public String pop(){
+		
+		if(isEmpty()){
+			System.out.println("no element");
+			return null;
+		}
+		ListNode topNode = stack.removeElement(count-1);
+		count--;
+		top = stack.getNode(count-1);
+		return topNode.getData();
+	}
+	
+	public ListNode peek(){
+		return top; 
+	}
+	
+	public boolean isEmpty(){
+		return stack.isEmpty();
+	}
+	
+	public int getSize(){
+		return stack.getSize();
+	}
+	
+	public void printAll(){
+		stack.printAll();
+	}
+}
+
+

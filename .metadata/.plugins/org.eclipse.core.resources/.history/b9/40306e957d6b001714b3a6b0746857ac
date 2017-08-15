@@ -1,0 +1,17 @@
+package abstractex;
+
+import abstractex.Calculator;
+
+public class ICalcTest {
+
+	public static void main(String[] args) {
+
+		ICalc clac = new Calculator();
+		
+		System.out.println(clac.add(10, 2));
+		System.out.println(clac.substract(10, 2));
+		System.out.println(clac.times(10, 2));
+		System.out.println(clac.divide(10, 2));
+	}
+
+}

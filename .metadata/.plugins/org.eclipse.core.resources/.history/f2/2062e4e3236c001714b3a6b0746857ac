@@ -1,0 +1,14 @@
+package myliststack;
+
+public class MyListStack {
+	public boolean testPair(String expr){
+		char current, openPair;
+		
+		listStack = new MyListStack();
+		
+		for(int i = 0; i < expr.length(); i++){
+			current
+		}
+	}
+
+}

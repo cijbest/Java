@@ -1,0 +1,37 @@
+package inheritance;
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		
+		Manager m = new Manager();
+		m.id = 12345;
+		m.name = "James";
+		
+		m.showInfo();
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
+		Employee e = new Employee();
+		PartTimeWorker pw = new PartTimeWorker();
+		
+		Employee pe = new PartTimeWorker(); //PartTimeWorker는 Employee 타입이다.
+		
+		//모든 타입은 Object가 될 수 있다.
+		Object op = new PartTimeWorker(); //Object 타입 밖에 못 씀
+		Object oe = new EmployeeTest();
+		
+		Employee e2 = (Employee)oe; // Employee 의 변수들을 쓰고 싶으면 강제로 캐스팅 해야 함
+		*/
+		
+		
+
+	}
+
+}

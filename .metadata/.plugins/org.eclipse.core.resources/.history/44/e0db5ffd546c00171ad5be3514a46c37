@@ -1,0 +1,19 @@
+package deque;
+
+import java.util.ArrayList;
+
+public class ArrayListTest {
+
+	public static void main(String[] args) {
+
+		ArrayList list = new ArrayList<>();
+		
+		list.add(new String("°­µ¿¿ø"));
+		list.add(new String("±è¿ìºó"));
+		list.add(new String("¼ÛÁß±â"));
+		
+		System.out.println(list);
+		
+	}
+
+}

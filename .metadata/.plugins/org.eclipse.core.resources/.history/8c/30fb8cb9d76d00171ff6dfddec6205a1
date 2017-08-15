@@ -1,0 +1,11 @@
+package stream;
+
+public class FileInOutTest {
+
+	public static void main(String[] args) {
+		
+		FileOutputStream fos = new FileInOutStream("out.txt");
+
+	}
+
+}

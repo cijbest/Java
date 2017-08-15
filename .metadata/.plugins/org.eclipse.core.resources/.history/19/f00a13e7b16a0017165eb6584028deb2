@@ -1,0 +1,14 @@
+package inheritance;
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		
+		Employee e = new Employee();
+		PartTimeWorker pw = new PartTimeWorker();
+		
+		Employee pe = new PartTimeWorker(); //PartTimeWorker는 Employee 타입이다.
+
+	}
+
+}

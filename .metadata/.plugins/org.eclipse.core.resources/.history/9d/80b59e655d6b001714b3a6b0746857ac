@@ -1,0 +1,58 @@
+package doublelinkedlist;
+
+public class MyDoubleLinkedList {
+	private DListNode head;
+	int count;
+	
+	public DListNode insertElement(int position, String data){
+		if(position < 0 || position > count){
+			return null;
+		}
+		
+		DListNode newNode = new DListNode(data);
+		DListNode tempNode = head;
+		
+		if(position == 0){
+			newNode.next = tempNode;
+			tempNode.prev = newNode;
+			head = newNode;
+		}
+		else{
+			DListNode preNode = null;
+			for(int i = 0; i< position; i++){
+				preNode = tempNode;
+				tempNode = tempNode.next;
+			}
+			newNode.prev = preNode;
+			newNode.next = preNode.next;
+			preNode.next = newNode;
+			if(tempNode != null){
+				tempNode.prev = newNode;
+			}
+		}
+		count++;
+		return newNode;
+	}
+	
+	public boolean isEmpty(){
+		if(count == 0) return true;
+		else return false;
+	}
+	
+	public void printAll(){
+		if(count == 0){
+			System.out.println("출력할 내용이 없습니다");
+			return;
+		}
+		
+		DListNode temp = head;
+		while(temp != null){
+			System.out.print(temp.getData());
+			temp = temp.next;
+			if(temp != null){
+				System.out.print("->");
+			}
+		}System.out.println();
+	}
+
+}

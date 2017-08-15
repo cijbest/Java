@@ -1,0 +1,74 @@
+package inheritance;
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		/*
+		Manager m = new Manager(12345, "James", "Sale");
+		m.id = 12345; //상위클래스에서 가져올 수 없는 이유 -> private이라서
+		m.name = "James"; //원래는 protected라서 못 쓰나 같은 패키지 내에 있기 때문에 사용 가능
+		m.department = "Sales";
+		
+		m.showInfo();
+		
+		Employee e = new Employee(100, "Tomas");
+		e.id = 100;
+		e.name = "Tomas";
+		
+		e.showInfo();
+		
+		Employee me = new Manager(9876, "Edward", "Sales"); //employee 변수만 쓸 수 있음 -> 그래서 생성자 만듦
+		me.id = 9876;
+		me.name = "Edward";
+		
+		me.showInfo(); //메소드는 manager꺼가 실행됨(virtual:가상 함수)
+		*/
+		
+		
+		Employee e = new Employee(100, "James");
+		e.salary = 3000000;
+		
+		Manager m = new Manager(200, "Tomas", "Sales");
+		m.salary = 5000000;
+		m.bonusRatio = 0.1;
+		
+		PartTimeWorker pw = new PartTimeWorker(300, "kim");
+		pw.payPerhour = 7600;
+		pw.workTime = 100;
+		
+		Employee[] eList = new Employee[3];
+		eList[0] = e;
+		eList[1] = m;
+		eList[2] = pw;
+		
+		for(Employee em : eList){
+			System.out.println(em.name + "님의 이번 달 급여는 " + em.getSalary() + "입니다.");
+		} // getSalary가 다형성의 형태가 됨. manager와 parttime을 구분해서 그에 따른 salary값을 달리 했기 때문.
+			
+		if(eList[1] instanceof Manager){ //상위 클래스에서 하위클래스로 다운 캐스팅 하고자 할 때
+			Manager m2 = (Manager)eList[1]; //참조클래스가 manager인 경우
+		}
+		else if(eList[1] instanceof PartTimeWorker){
+			PartTimeWorker m2 = (PartTimeWorker)eList[1];
+		}
+		
+		
+		
+		/*
+		Employee e = new Employee();
+		PartTimeWorker pw = new PartTimeWorker();
+		
+		Employee pe = new PartTimeWorker(); //PartTimeWorker는 Employee 타입이다.
+		
+		//모든 타입은 Object가 될 수 있다.
+		Object op = new PartTimeWorker(); //Object 타입 밖에 못 씀
+		Object oe = new EmployeeTest();
+		
+		Employee e2 = (Employee)oe; // Employee 의 변수들을 쓰고 싶으면 강제로 캐스팅 해야 함
+		*/
+		
+		
+
+	}
+
+}

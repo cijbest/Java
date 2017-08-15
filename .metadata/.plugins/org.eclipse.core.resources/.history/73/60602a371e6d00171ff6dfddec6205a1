@@ -1,0 +1,22 @@
+package treeset;
+
+public class AccountTreeSetTest {
+
+	public static void main(String[] args) {
+		
+		AccountMangaerTreeSet manager = new AccountMangaerTreeSet();
+		
+		manager.insertAccount("12345", "Kim", 5000.0F);
+		manager.insertAccount("12341", "Lee", 6000.0F);
+		manager.insertAccount("12342", "Park", 7000.0F);
+		
+		manager.setDeposite("12345", 500);
+		manager.setDeposite("12341", 500);
+		manager.setDeposite("12342", 500);
+		
+		manager.displayAll();
+
+	}
+
+
+}

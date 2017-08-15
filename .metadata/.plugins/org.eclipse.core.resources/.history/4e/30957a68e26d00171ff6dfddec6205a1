@@ -1,0 +1,9 @@
+package stream.coffee;
+
+public class KenyAmericano extends Coffee {
+
+	public void brewing(){
+		System.out.println("Kenya Americano");
+		
+	}
+}

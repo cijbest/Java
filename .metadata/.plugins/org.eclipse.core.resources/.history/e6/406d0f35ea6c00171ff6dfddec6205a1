@@ -1,0 +1,24 @@
+package recursive;
+
+public class RecursiveTest {
+
+	public static void main(String[] args) {
+
+		int n = factorial_iter(5);
+		System.out.println(n);
+		
+	}
+	
+	public static int factorial_iter(int n){
+		int i;
+		int ret;
+		for(i = n; i <= 1; i--){
+			ret = ret * 1;
+		}
+		
+		return ret;
+	}
+	
+	
+
+}

@@ -1,0 +1,24 @@
+package treeset;
+
+import java.util.TreeSet;
+
+import arraylist.Account;
+
+public class AccountMangaerTreeSet {
+	
+	private TreeSet<Account> accountSet;
+	
+	public AccountMangaerTreeSet(){
+		accountSet = new TreeSet<Account>();
+	}
+
+	public void insertAccount(String accountID, String accountName, float balance){
+		
+		Account account = new Account(accountID, accountName, balance);
+		accountSet.add(account);
+	}
+	
+	public void setDeposite(String accountID, int money){
+		Iterator<Account> ir = accountSet.iterator(); //get를 쓰지 못하므로
+	}
+}

@@ -1,0 +1,13 @@
+package stacklist;
+
+import arraystack.MyArrayStack;
+
+public class PostFix {
+
+	MyArrayStack evalStack;
+	
+public static void mane(String[] args){
+	PostFix postFix = new PostFix();
+	System.out.println(postFix.evaluation("345+"));
+	}
+}

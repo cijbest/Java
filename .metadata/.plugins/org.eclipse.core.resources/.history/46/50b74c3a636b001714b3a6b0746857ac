@@ -1,0 +1,11 @@
+package inheritance;
+
+public class Employee extends Object { //java의 모든 최상위 클래스는 Object / 다 Object이다.
+	int id;
+	String name;
+	
+	public void showInfo(){
+		System.out.println(id + ", " + name);
+	}
+
+}

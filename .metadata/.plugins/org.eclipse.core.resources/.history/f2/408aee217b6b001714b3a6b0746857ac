@@ -1,0 +1,19 @@
+package abstractex;
+
+public abstract class Display { //abstract 함수를 가지고 있으면 클래스도 abstract여야 함
+
+	int num;
+	
+	public abstract void start(); //추상 함수
+	public abstract void print();
+	public abstract void end();
+	
+	public final void display(){ //템플릿 메소드 (디자인), 메소드에 final이 붙으면 재정의 할 수 없음, 클래스가 final이면 상속 불가
+		start();
+		for(int i = 0; i < 5; i++){
+			print();
+		}
+		end();
+	}
+	
+}

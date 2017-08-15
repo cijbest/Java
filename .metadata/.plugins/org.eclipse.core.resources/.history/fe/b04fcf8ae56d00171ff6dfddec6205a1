@@ -1,0 +1,14 @@
+package stream.texteditor;
+
+public abstract class MyEditor extends TextEditor{
+
+	TextEditor texteditor;
+	
+	public MyEditor(TextEditor texteditor){
+		this.texteditor = texteditor;
+	}
+	
+	public void edit(){
+		texteditor.edit();
+	}
+}

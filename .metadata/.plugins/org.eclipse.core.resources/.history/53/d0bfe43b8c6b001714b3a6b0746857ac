@@ -1,0 +1,60 @@
+package linkstack;
+
+import array.MyArray;
+import linkedlist.ListNode;
+import linkedlist.MyLinkedList;
+
+public class MyListStack {
+	
+	MyLinkedList stack;
+	ListNode top;
+	int count;
+	
+public MyListStack(){
+		
+		stack = new MyLinkedList();
+		top = top.next;
+	}
+	
+	public void push(String data){
+		top = stack.addElement(data);
+		count++;
+	}
+	
+	public int pop(){
+		
+		if(isEmpty()){
+			System.out.println("stack is empty");
+			return MyArray.ERROR_NUM;
+		}
+		
+		int num = stack.removeElement(top-1);
+		top--;
+		return num;
+	}
+	
+	public int peek(){
+		
+		if(isEmpty()){
+			System.out.println("stack is empty");
+			return MyArray.ERROR_NUM;
+		}
+		
+		return top; //꼭대기에 있는 요소 그냥 리턴 해 줌
+	}
+	
+	public boolean isEmpty(){
+		if(top <= 0) return true;
+		else return false;
+	}
+	
+	public int getSize(){
+		return stack.getSize();
+	}
+	
+	public void printAll(){
+		stack.printAll();
+	}
+}
+
+}

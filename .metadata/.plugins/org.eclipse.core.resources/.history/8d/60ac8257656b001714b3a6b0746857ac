@@ -1,0 +1,15 @@
+package inheritance;
+
+public class Manager extends Employee {
+	
+	String department;
+	int bonusRatio;
+	
+	
+	
+	
+	public void test(){
+		System.out.println(id);
+	}
+
+}

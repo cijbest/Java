@@ -1,0 +1,29 @@
+package stream;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileInOutTest {
+   public static void main(String[] args) {
+
+      FileOutputStream fos = null;
+
+      try {
+         fos = new FileOutputStream("out.txt");// byte ¥‹¿ß∑Œ
+
+         fos.write(65);
+         fos.write(66);
+         fos.write(67);
+
+      } catch (IOException e) {
+         System.out.println(e);
+      } finally{
+         
+         try {
+            fos.close();
+         } catch (IOException e) {
+            System.out.println(e);
+         }
+      }
+   }
+}

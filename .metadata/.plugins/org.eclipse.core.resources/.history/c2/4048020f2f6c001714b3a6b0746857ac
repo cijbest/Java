@@ -1,0 +1,5 @@
+package queuearray;
+
+public class IQueue {
+
+}

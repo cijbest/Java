@@ -1,0 +1,8 @@
+package linkstack;
+
+public class MyListStack {
+	
+	MyLinkedList stack;
+	ListNode top;
+
+}

@@ -1,0 +1,11 @@
+package inheritance;
+
+public class Employee {
+	int id;
+	String name;
+	
+	public void showInfo(){
+		System.out.println(id + ", " + name);
+	}
+
+}

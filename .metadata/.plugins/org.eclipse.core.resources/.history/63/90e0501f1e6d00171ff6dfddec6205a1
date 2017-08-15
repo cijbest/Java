@@ -1,0 +1,42 @@
+package treeset;
+
+import java.util.Iterator;
+import java.util.TreeSet;
+
+import arraylist.Account;
+
+public class AccountMangaerTreeSet {
+	
+	private TreeSet<Account> accountSet;
+	
+	public AccountMangaerTreeSet(){
+		accountSet = new TreeSet<Account>();
+	}
+
+	public void insertAccount(String accountID, String accountName, float balance){
+		
+		Account account = new Account(accountID, accountName, balance);
+		accountSet.add(account);
+	}
+	
+	public void setDeposite(String accountID, int money){
+		Iterator<Account> ir = accountSet.iterator(); //get를 쓰지 못하므로
+		while(ir.hasNext()){
+			Account acc = ir.next();
+			String temp = acc.getAccountID();
+			if(temp.equals(accountID)){
+				acc.deposite(money);
+				return;
+			}
+		}
+		System.out.println("계좌버호 오류입니다.");
+		
+	}
+	
+	public void displayAll(){
+		for(Account acc : accountSet){
+			System.out.println(acc); // 순서에 상관없이 출력됨
+		}
+	}
+}
+

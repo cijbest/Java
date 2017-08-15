@@ -1,0 +1,58 @@
+package interfaceex;
+
+import java.io.IOException;
+
+interface ISort{
+	
+	public void sort();
+}
+
+class BubbleSort implements ISort{
+
+	@Override
+	public void sort() {
+		System.out.println("Bubble sort");
+	}
+	
+}
+
+class QuickSort implements ISort{
+
+	@Override
+	public void sort() {
+		System.out.println("Quick sort");
+	}
+	
+}
+
+class HeapSort implements ISort{
+
+	@Override
+	public void sort() {
+		System.out.println("Heap sort");
+	}
+	
+}
+
+public class ISortTest {
+	
+	public static void main(String[] args) throws IOException{
+		
+		ISort[] sortAlogithms = {new BubbleSort(), new QuickSort(), new HeapSort()};
+		ISort instance = null;
+		
+		int in = System.in.read(); //읽어들임
+		
+		if(in == 'B'){
+			instance = sortAlogithms[0];
+		}else if(in == 'Q' || in == 'q'){
+			instance = sortAlogithms[1];
+		}else if(in == 'H' || in == 'h'){
+			instance = sortAlogithms[2];
+		}else{
+			System.out.println("not suppoert");
+		}
+		
+	}
+
+}

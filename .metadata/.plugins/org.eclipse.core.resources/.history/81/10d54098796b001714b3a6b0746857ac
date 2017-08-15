@@ -1,0 +1,25 @@
+package abstractex;
+
+public class CharDisplay extends Display{//추상 클래스를 상속 받았으므로 클래스를 추상 클래스로 만들거나 속성들을 설정해주어야 함
+
+	char ch;
+	
+	public CharDisplay(char ch){
+		this.ch = ch;
+	}
+	
+	@Override
+	public void start() {
+		System.out.println("===================");
+	}
+
+	@Override
+	public void print() {
+		System.out.println(ch);
+	}
+
+	@Override
+	public void end() {
+		System.out.print("===================");
+	} 
+}

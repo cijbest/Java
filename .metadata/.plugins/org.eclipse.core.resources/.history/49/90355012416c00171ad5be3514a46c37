@@ -1,0 +1,9 @@
+package circularqueue;
+
+public interface IQueue {
+
+	void enQueue(char ch);
+	char deQsueue();
+	char peek();
+	void printAll();
+}

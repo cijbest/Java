@@ -1,0 +1,11 @@
+package abstractex;
+
+public class DisplayTest {
+
+	public static void main(String[] args) {
+
+		Display chDisplay = new CharDisplay("Hello, world");
+		chDisplay.display();
+	}
+
+}

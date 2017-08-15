@@ -1,0 +1,46 @@
+package arraylist;
+
+class Dog{
+	String name;
+	
+	Dog(String name){
+		this.name = name;
+	}
+
+	@Override
+	public String toString() { //toString을 다시 재정의 해줌
+		return name;
+	}
+	
+}
+
+
+
+public class ToStingTest {
+
+	public static void main(String[] args) {
+		
+		Dog dog = new Dog("파트라슈");
+		System.out.println(dog);
+		
+		String str = new String("춘향이");
+		System.out.println(str);
+		
+		int i = 10; //4byte 정수
+		Integer i2 = new Integer(100); //Integer는 객체
+		System.out.println(i2);
+		
+		//Float
+		//Double
+		//Char
+		//-> 이런 것들을 wrapper class라고 함
+		
+		int i3 = i + i2; //autoboxing
+		Integer i4 = i3 + i2;
+		System.out.println(i3);
+		System.out.println(i4);
+		
+		
+	}
+
+}

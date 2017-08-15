@@ -1,0 +1,25 @@
+package polynomial;
+
+public class PolynomialTest {
+
+	public static void main(String[] args) {
+
+		PolyLinkedList aList = new PolyLinkedList();
+		
+		aList.addElement(6, 5);
+		aList.addElement(2, 3);
+		aList.addElement(0, 2);
+		aList.printAll();
+		
+		PolyLinkedList bList = new PolyLinkedList();
+		bList.addElement(6, 6);
+		bList.addElement(4, 5);
+		bList.addElement(2, 2);
+		bList.addElement(1, 3);
+		bList.printAll();
+		
+		PolyLinkedList resultList = aList.addPolynomial(aList, bList);
+		resultList.printAll();
+	}
+
+}

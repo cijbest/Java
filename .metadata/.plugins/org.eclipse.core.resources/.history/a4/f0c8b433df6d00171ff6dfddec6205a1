@@ -1,0 +1,28 @@
+package stream;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileCopy {
+
+	public static void main(String[] args) throws IOException{
+
+		FileInputStream fis = new FileInputStream("jcw.gif");
+		FileOutputStream fos = new FileOutputStream("copy.gif");
+		
+		long pseconds = System.currentTimeMillis(); //얼마나 걸리나
+		
+		int i = 0;
+		while((i = fis.read()) != -1 ){
+			fos.write(i);
+		}
+		
+		pseconds = System.currentTimeMillis() - pseconds;
+		System.out.println(pseconds + "milliseconds");
+		
+		fis.close();
+		fos.close();
+	}
+
+}

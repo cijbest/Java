@@ -1,0 +1,15 @@
+package stream.texteditor;
+
+public class Line extends Editor {
+
+	public Line(TextEditor texteditor) {
+		super(texteditor);
+	}
+	
+	public void brewing(){
+		super.edit();
+		System.out.print(" with Line");
+	}
+	
+
+}

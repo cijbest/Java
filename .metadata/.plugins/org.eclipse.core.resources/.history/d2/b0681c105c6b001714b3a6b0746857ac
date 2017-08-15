@@ -1,0 +1,26 @@
+package doublelinkedlist;
+
+public class DListNode {
+
+	private String data;
+	public DListNode next;
+	
+	public DListNode(){
+		data = null;
+		next = null;
+	}
+	
+	public DListNode(String data){
+		this.data = data;
+		next = null;
+	}
+	
+	public DListNode(String data, DListNode next){
+		this.data = data;
+		this.next = next;
+	}
+	
+	public String getData(){
+		return data;
+	}
+}

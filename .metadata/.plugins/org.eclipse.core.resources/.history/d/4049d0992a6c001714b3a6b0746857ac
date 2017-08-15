@@ -1,0 +1,43 @@
+package stacklist;
+
+import arraystack.MyArrayStack;
+
+public class PostFix {
+
+	MyArrayStack evalStack;
+	int op1, op2, value;
+	char testch;
+	evalStack = new MyArrayStack();
+	
+	public Postfix(char testch){
+		this.testch = testch;
+	}
+	
+	for(int i = 0; i < testch.length; i++){
+		if(testch.charAt(i) != '+' || testch.charAt(i) != '-' || testch.charAt(i) != '*' || testch.charAt(i) != '/'){
+			value = test.charAt(i);
+			evalStack.push(value);
+		}
+		
+		switch(testch.charAt(i)){
+		case '+':
+			evalStack.pop(op1 + op2);
+			break;
+		case '-':
+			evalStack.pop(op1 - op2);
+			break;
+		case '*':
+			evalStack.pop(op1 * op2);
+			break;
+		default '/':
+			evalStack.pop(op1 / op2);
+			break;
+		}
+	}
+	
+	
+public static void mane(String[] args){
+	PostFix postFix = new PostFix();
+	System.out.println(postFix.evaluation("345+*"));
+	}
+}

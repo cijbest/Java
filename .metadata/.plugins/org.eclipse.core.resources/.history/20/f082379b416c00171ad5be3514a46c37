@@ -1,0 +1,42 @@
+package circularqueue;
+
+import queuearray.IQueue;
+
+public class MyCircularQueue implements IQueue {
+	
+	private int front;
+	private int rear;
+	private int QUEUE_SIZE;
+	char[] itemArr;
+	
+	public MyCircularQueue(int size){
+		itemArr = new char[size];
+		front = -1;
+		rear = -1;
+	}
+
+	@Override
+	public void enQueue(char ch) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public char deQsueue() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public char peek() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void printAll() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

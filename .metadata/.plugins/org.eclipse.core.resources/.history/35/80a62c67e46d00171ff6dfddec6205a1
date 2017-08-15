@@ -1,0 +1,18 @@
+package stream.texteditor;
+
+import stream.coffee.Coffee;
+
+public abstract class TextEditor {
+	/*
+	 Coffee coffee;
+	public Decorator(Coffee coffee){
+		this.coffee = coffee;
+	}
+	
+	public void brewing(){
+		coffee.brewing();
+	}
+	 * */
+
+	public abstract void edit();
+}

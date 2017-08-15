@@ -1,0 +1,72 @@
+package deque;
+
+import doublelinkedlist.DListNode;
+import doublelinkedlist.MyDoubleLinkedList;
+import linkedlist.ListNode;
+
+public class MyDeque extends MyDoubleLinkedList{
+	
+	private DListNode front;
+	private DListNode rear;
+	
+	public void insertFront(){
+		
+		
+	}
+	
+	public void insertRear(String data){
+		
+		DListNode newNode;
+		if(isEmpty()){
+			newNode = addElement(data);
+			front = newNode;
+			rear = newNode;
+		}
+		else{
+			newNode = insertElement(0, data);
+			front.prev = newNode;
+			newNode.next = front;
+			front = newNode;			
+		}
+	}
+	
+	public void insertRear(String data){
+		
+		DListNode newNode;
+		if(isEmpty()){
+			newNode = addElement(data);
+			front = newNode;
+			rear = newNode;
+		}
+		else{
+			newNode = addElement(data);
+			rear.next = newNode;
+			newNode.prev = rear;
+			rear = newNode;			
+		}
+	}
+	
+	public String deleteFront(){
+		
+	}
+	
+	public String deleteRear(){
+		
+	}
+	
+	public void printAll(){
+		
+		if(isEmpty()){
+			System.out.println("queue is empty");
+			return;
+		}
+		
+		DListNode temp = front;
+		while(temp != null){
+			System.out.print(temp.getData() + " ");
+			temp = temp.next;
+		}System.out.println();
+	}
+
+	
+}

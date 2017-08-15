@@ -1,0 +1,28 @@
+package arraylist;
+
+class Dog{
+	String name;
+	
+	Dog(String name){
+		this.name = name;
+	}
+}
+
+
+
+public class ToStingTest {
+
+	public static void main(String[] args) {
+		
+		Dog dog = new Dog("ÆÄÆ®¶ó½´");
+		System.out.println(dog);
+		
+		String str = new String("ÃáÇâÀÌ");
+		System.out.println(str);
+		
+		int i = 10; //4byte Á¤¼ö
+		Integer i2 = new Integer(100); //Integer´Â °´Ã¼
+		
+	}
+
+}

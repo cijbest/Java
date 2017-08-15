@@ -1,0 +1,18 @@
+package abstractex;
+
+public class DisplayTest {
+
+	public static void main(String[] args) {
+		String c = "Hello, world";
+
+		Display chDisplay = new CharDisplay(getByte(c));
+		chDisplay.display();
+		
+	}
+
+	private static char getByte(String c) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

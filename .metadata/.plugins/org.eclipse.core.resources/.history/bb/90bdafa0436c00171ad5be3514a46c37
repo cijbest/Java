@@ -1,0 +1,21 @@
+package circularqueue;
+
+import queuearray.IQueue;
+
+public class MyCircularOueueTest {
+
+	public static void main(String[] args) {
+
+		IQueue queue = new MyCircularQueue(3);
+
+		queue.enQueue('A');
+		queue.enQueue('B');
+		queue.enQueue('C');
+
+		queue.printAll();
+		System.out.println(queue.deQueue());
+		queue.enQueue('C');
+		queue.printAll();
+	}
+
+}

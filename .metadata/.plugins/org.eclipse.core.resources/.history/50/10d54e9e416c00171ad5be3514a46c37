@@ -1,0 +1,46 @@
+package circularqueue;
+
+import queuearray.IQueue;
+
+public class MyCircularQueue implements IQueue {
+	
+	private int front;
+	private int rear;
+	private int QUEUE_SIZE;
+	char[] itemArr;
+	
+	public MyCircularQueue(int size){
+		itemArr = new char[size];
+		front = -1;
+		rear = -1;
+	}
+
+	@Override
+	public void enQueue(char ch) {
+		
+	}
+	
+	public boolean isEmpty(){
+		return (front == rear);
+	}
+	
+	public boolean isFull(){
+		return ((rear +1) % QUEUE_SIZE == front);
+	}
+
+	@Override
+	public char deQueue() {
+		return 0;
+	}
+
+	@Override
+	public char peek() {
+		return 0;
+	}
+
+	@Override
+	public void printAll() {
+		
+	}
+
+}

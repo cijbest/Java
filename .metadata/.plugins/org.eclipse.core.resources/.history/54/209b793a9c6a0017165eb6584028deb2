@@ -1,0 +1,51 @@
+package array;
+
+public class MyArray {
+	
+	int[] intArr;
+	int ARRAY_SIZE;
+	int count;
+	
+	public MyArray(){
+		ARRAY_SIZE = 10;
+		intArr = new int [ARRAY_SIZE];
+		count = 0;
+	}
+	
+	public MyArray(int size){
+		ARRAY_SIZE = size;
+		intArr = new int [ARRAY_SIZE];
+		count = 0;
+	}
+	
+	public void addElement(int num){ //num을 intArr에 넣어라
+		if(isFull()){
+			System.out.println("not enough memory");
+			return;
+		}
+		intArr[count++] = num;
+		
+	}
+	
+	public void intsertElement(int position, int num){
+		for(int i = count-1 ; i < position; i--){
+			intArr[i+1] = 
+		}
+		intArr[count] = intArr[count+1];
+		
+	}
+	
+	public boolean isFull(){
+		if(count == ARRAY_SIZE){
+			return true;
+		}
+		else return false;
+	}
+	
+	public void printAll(){
+		for(int i = 0; i < count; i++){
+			System.out.println(intArr[i]);
+		}
+	}
+
+}

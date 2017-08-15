@@ -1,0 +1,5 @@
+package circularqueue;
+
+public interface IQueue {
+
+}

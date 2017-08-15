@@ -1,0 +1,10 @@
+package inheritance;
+
+public class PartTimeWorker extends Employee { //»ó¼Ó
+	
+	int payPerhour;
+	int workTime;
+	
+	
+
+}

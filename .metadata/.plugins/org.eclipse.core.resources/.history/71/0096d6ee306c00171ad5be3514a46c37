@@ -1,0 +1,47 @@
+package queuearray;
+
+public class MyArrayQueue implements IQueue{
+
+	private int front;
+	private int rear;
+	private int QUEUE_SIZE;
+	char[] itemArr;
+	
+	public MyArrayQueue(int size){
+		front = -1;
+		rear = -1;
+		QUEUE_SIZE = size;
+		itemArr = new char[QUEUE_SIZE];
+	}
+	
+	@Override
+	public void enQueue(char ch) {
+		
+	}
+
+	@Override
+	public char deAueue() {
+		return 0;
+	}
+
+	@Override
+	public char peek() {
+		return 0;
+	}
+
+	@Override
+	public void printAll() {
+		
+	}
+	
+	public boolean isEmpty(){
+		return (front == rear);
+
+	}
+
+	public boolean isFull(){
+	  return (rear == QUEUE_SIZE -1);
+	}
+	
+
+}

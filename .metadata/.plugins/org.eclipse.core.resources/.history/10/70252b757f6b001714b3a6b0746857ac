@@ -1,0 +1,41 @@
+package interfaceex;
+
+interface ISort{
+	
+	public void sort();
+}
+
+class BubbleSort implements ISort{
+
+	@Override
+	public void sort() {
+		System.out.println("Bubble sort");
+	}
+	
+}
+
+class QuickSort implements ISort{
+
+	@Override
+	public void sort() {
+		System.out.println("Quick sort");
+	}
+	
+}
+
+class HeapSort implements ISort{
+
+	@Override
+	public void sort() {
+		System.out.println("Heap sort");
+	}
+	
+}
+
+public class ISortTest {
+	
+	public static void main(String[] args){
+		
+	}
+
+}

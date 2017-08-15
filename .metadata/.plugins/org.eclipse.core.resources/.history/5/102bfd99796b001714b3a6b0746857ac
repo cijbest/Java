@@ -1,0 +1,17 @@
+package abstractex;
+
+public abstract class Display { //abstract 함수를 가지고 있으면 클래스도 abstract여야 함
+
+	public abstract void start(); //추상 함수
+	public abstract void print();
+	public abstract void end();
+	
+	public void display(){ //템플릿 메소드 (디자인)
+		start();
+		for(int i = 0; i < 5; i++){
+			print();
+		}
+		end();
+	}
+	
+}

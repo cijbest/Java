@@ -1,0 +1,37 @@
+package tree;
+
+public class LinkedTreeTest {
+	
+	class TreeNode{
+		Object data;
+		TreeNode left;
+		TreeNode right;
+	}
+	
+	class LinkedTree{
+		private TreeNode root;
+		
+		public TreeNode makeBT(TreeNode bt1, Object data, TreeNode bt2){
+			TreeNode root = new TreeNode();
+			root.data = data;
+			root.left = bt1;
+			root.right = bt2;
+			return root;
+		}
+		
+		public void preorder(TreeNode root){
+			if(root != null){
+				System.out.printf("%c", root.data);
+				preorder(root.left);
+				preorder(root.right);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

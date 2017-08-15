@@ -1,0 +1,48 @@
+package arraylist;
+
+public class Account {
+	
+	public String accountID;
+	private String accountName;
+	private float balance;
+	
+	public Account(String accountID, String accountName, float balance){
+		this.accountID = accountID;
+		this.accountName = accountName;
+		this.balance = balance;
+	}
+	
+	public void deposite(int money){
+		if(money < 0){
+			System.out.println("net enough money");
+			return;
+		}
+		balance += money;
+	}
+	
+	public String getAccountID() {
+		return accountID;
+	}
+	public void setAccountID(String accountID) {
+		this.accountID = accountID;
+	}
+	public String getAccountName() {
+		return accountName;
+	}
+	public void setAccountName(String accountName) {
+		this.accountName = accountName;
+	}
+	public float getBalance() {
+		return balance;
+	}
+	public void setBalance(float balance) {
+		this.balance = balance;
+	}
+	
+	public String toString(){
+		return accountName + "´ÔÀÇ °èÁÂ¹øÈ£´Â " + accountID + "ÀÌ¸ç, ÀÜ°í´Â " + balance + "ÀÔ´Ï´Ù.";
+	}
+	
+	
+
+}

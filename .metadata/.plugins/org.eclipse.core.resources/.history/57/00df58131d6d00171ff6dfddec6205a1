@@ -1,0 +1,12 @@
+package treeset;
+
+public class AccountTreeSetTest {
+
+	public static void main(String[] args) {
+		
+		AccountMangaerTreeSet manager = new AccountMangaerTreeSet();
+		
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package stream.texteditor;
+
+public class MyEditor extends TextEditor {
+
+	@Override
+	public void edit() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package stream.coffee;
+
+public class CoffeeTest {
+
+	public static void main(String[] args) {
+
+		Coffee kenya = new KenyAmericano();
+		kenya.brewing();
+		System.out.println();
+	}
+
+}

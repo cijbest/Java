@@ -1,0 +1,17 @@
+package arraylist;
+
+class Dog{
+	
+	String name;
+}
+
+public class ToStingTest {
+
+	public static void main(String[] args) {
+		
+		Dog dog = new Dog();
+		System.out.println(dog);
+		
+	}
+
+}

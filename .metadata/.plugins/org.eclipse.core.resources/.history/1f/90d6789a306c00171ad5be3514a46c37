@@ -1,0 +1,9 @@
+package queuearray;
+
+public interface IQueue {
+
+	void enQueue(char ch);
+	char deAueue();
+	char peek();
+	void printAll();
+}
